@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Track your order | FoodHub</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="/">🍔 FoodHub</a>
+    <nav><a href="/">Menu</a></nav>
+  </header>
+  <main class="page">
+    <h1>Track your order</h1>
+    <form id="track-form" class="panel">
+      <input name="id" placeholder="Order number" required inputmode="numeric" />
+      <input name="phone" placeholder="Phone used for the order (10 digits)" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" title="Enter a 10-digit phone number" />
+      <button class="btn" type="submit">Track</button>
+    </form>
+    <div id="result"></div>
+    <form id="complaint-form" class="panel" hidden>
+      <h2>Report a problem</h2>
+      <select name="reason" required>
+        <option value="">Choose a reason</option>
+        <option>Order not received</option><option>Wrong or missing items</option>
+        <option>Late delivery</option><option>Food quality</option><option>Other</option>
+      </select>
+      <input name="details" placeholder="Tell us what happened (optional)" maxlength="500" />
+      <button class="btn" type="submit">Send complaint</button>
+      <p id="complaint-msg" class="msg"></p>
+    </form>
+  </main>
+  <script src="/js/track.js"></script>
+</body>
+</html>

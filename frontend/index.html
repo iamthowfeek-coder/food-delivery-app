@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FoodHub | Online Food Delivery</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="/">🍔 FoodHub</a>
+    <nav>
+      <a href="/track.html">Track order</a>
+      <button id="cart-toggle" class="btn" type="button">Cart (<span id="cart-count">0</span>)</button>
+    </nav>
+  </header>
+  <main class="layout">
+    <section>
+      <h1>Hungry? Order now</h1>
+      <div id="filters" class="filters"></div>
+      <div id="menu" class="grid"><p class="empty">Loading menu...</p></div>
+    </section>
+    <aside id="cart" class="cart">
+      <h2>Your cart</h2>
+      <div id="cart-items"></div>
+      <p class="total">Total: <strong id="cart-total">₹0</strong></p>
+      <form id="checkout">
+        <input name="customer_name" placeholder="Your name" required maxlength="100" />
+        <input name="phone" placeholder="Phone number (10 digits)" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" title="Enter a 10-digit phone number" />
+        <input name="address" placeholder="Delivery address" required maxlength="255" />
+        <button class="btn" type="submit" id="place">Place order</button>
+      </form>
+      <p id="message" class="msg"></p>
+    </aside>
+  </main>
+  <script src="/js/app.js"></script>
+</body>
+</html>

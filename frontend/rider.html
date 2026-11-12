@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rider | FoodHub</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="/rider.html">🛵 FoodHub Rider</a>
+    <nav><span id="rider-name"></span><button id="logout" class="btn btn--small" type="button" hidden>Log out</button></nav>
+  </header>
+  <main class="page">
+    <form id="login" class="panel">
+      <h2>Rider login</h2>
+      <input name="phone" placeholder="Phone (10 digits)" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" />
+      <input name="pin" type="password" placeholder="PIN" required inputmode="numeric" maxlength="6" />
+      <button class="btn" type="submit">Log in</button>
+    </form>
+    <p id="rider-msg" class="msg"></p>
+    <section id="jobs-wrap" hidden>
+      <p id="today" class="empty"></p>
+      <div id="jobs"></div>
+    </section>
+  </main>
+  <script src="/js/rider.js"></script>
+</body>
+</html>

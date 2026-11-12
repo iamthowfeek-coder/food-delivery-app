@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin | FoodHub</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="top"><a class="brand" href="/">🍔 FoodHub Admin</a></header>
+  <main class="page" style="max-width: 980px">
+    <form id="key-form" class="panel">
+      <input id="key" type="password" placeholder="Admin key" required />
+      <button class="btn" type="submit">Load dashboard</button>
+    </form>
+    <div class="stats">
+      <div class="stat"><span>Total orders</span><strong id="stat-orders">-</strong></div>
+      <div class="stat"><span>Total revenue</span><strong id="stat-revenue">-</strong></div>
+    </div>
+    <p id="admin-msg" class="msg"></p>
+
+    <div class="panel scroll"><h2>Orders</h2><table>
+      <thead><tr><th>#</th><th>Customer</th><th>Total</th><th>Rider</th><th>Status</th></tr></thead>
+      <tbody id="orders"></tbody>
+    </table></div>
+
+    <div class="panel"><h2>Riders</h2>
+      <form id="rider-form" class="inline-form">
+        <input name="name" placeholder="Name" required maxlength="100" />
+        <input name="phone" placeholder="Phone (10 digits)" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" />
+        <input name="pin" placeholder="PIN (4-6 digits)" required inputmode="numeric" pattern="[0-9]{4,6}" maxlength="6" />
+        <button class="btn" type="submit">Add rider</button>
+      </form>
+      <div id="riders" class="empty"></div>
+    </div>
+
+    <div class="panel"><h2>Complaints</h2><div id="complaints"></div></div>
+  </main>
+  <script src="/js/admin.js"></script>
+</body>
+</html>
